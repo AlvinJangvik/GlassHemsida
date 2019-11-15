@@ -1,0 +1,35 @@
+.logo { grid-area: logo;}
+h1 { grid-area: title; }
+.meny  { grid-area: meny; }
+.pic1 { grid area: pic1; }
+.pic2 { grid area: pic2; }
+.pic3 { grid area: pic3; }
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+	'logo title . . . . . meny';
+	grid-gap: 2px;
+	text-align: center;
+	font-size: 21px;
+}
+
+.grid-container2 {
+	display: grid;
+}
+
+.grid-container3 {
+	display: grid;
+	grid-template-areas:
+	'pic1 pic2 pic3';
+	grid-gap: 2px;
+	text-align: center;
+	font-size: 60px;
+}
+
+body {
+	background-color: #FFE981;
+}
+
+
+
