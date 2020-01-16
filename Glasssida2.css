@@ -1,0 +1,187 @@
+body{  /**Ändrar allt inom body**/ 
+    background-color:#ffec8a;  /**Byter bakgrundsfärg på hela sidan**/
+}
+
+p:nth-child(odd){
+background-color:#ffc3ef;
+    border:1px solid grey;
+
+}
+p:nth-child(even){
+background-color:#adffd7;
+    border:1px solid grey;
+}
+header h1{
+    text-align:center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display:block;
+    
+}
+header{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    text-align:center;
+}
+nav{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+a{
+    color:white;
+}
+img{
+    width:140px;
+}
+.dropdowntn{
+    background-color:black;
+    color:white;
+    padding:16px;
+    font-size:16px;
+    border-radius:20px;
+
+    
+}
+.dropdown{
+    position:relative;
+    display:inline-block;
+    margin-left:400px;
+   
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:black;
+    min-width:60px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding:12px 16px;
+    z-index:1;
+    right:0;
+    border-radius:16px;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.text{
+    position:relative;
+    width:33vw;
+    height:33vW;
+    background-size:100%;
+    background-position:center;
+    transition:0.5s;
+    overflow:hidden;
+    background-repeat:no-repeat;
+    display:grid;
+    border-color:black;   
+    text-align:center;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.text1{
+    background-image:url(https://www.fourjay.org/myphoto/f/112/1127876_strawberry-ice-cream-png.png);
+    background-size: 400px auto;
+    border-radius:50px;
+}
+
+.text2
+{
+    background-image:url(https://i-love-png.com/images/ice-cream-scoop-png-photo_13534.png);
+    background-size: 250px auto;
+    border-radius:50px;
+}
+.text3
+{
+    background-image:url(https://www.moevenpick-icecream.com/sites/default/files/styles/product_detail_image/public/products/photos/lemon-lime.png?itok=SrQF2JcG);
+    background-size: 450px auto;
+    border-radius:50px; 
+}
+.text4
+{
+    background-image:url(https://www.moevenpick-icecream.com/sites/default/files/styles/listing_image/public/products/photos/chocolate-salted-caramel.png?itok=dIkbU69h);
+    background-size: 450px auto;
+    border-radius:50px;
+    margin-top:-16px;
+}
+.text5
+{
+    background-image:url(https://www.moevenpick-icecream.com/sites/default/files/styles/listing_image/public/products/photos/cookies-caramel.png?itok=a5scUAqZ);
+    background-size: 450px auto;
+    border-radius:50px; 
+    margin-top:-16px;
+}
+.text6
+{
+    background-image:url(http://myfavoriteicecream.com/imgs/icecreams/Wet-Paint.gif);
+    background-size: 250px auto;
+    border-radius:50px; 
+    margin-top:-16px;
+}
+
+.text:hover{
+    background-size:115%;
+  }
+.text1:hover{
+    background-size:150%;
+}
+
+.text2:hover{
+    background-size:75%;
+}
+.text3:hover{
+    background-size:120%;
+
+}
+.text6:hover{
+    background-size:65%;
+}
+  
+.text:before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transform:translateY(90%);
+    background-color:rgba(0,0,0,0.3);
+    color:#fff;
+    padding:0 8px;
+    content:attr(data-title);
+    transition:0.5s 0.1s;
+    font-weight:bold;
+    font-size:1.5em;
+    border-radius:55px;
+    margin-right:5px;
+    margin-left:5px;
+    margin-top:5px;
+       
+}
+  .text:after{
+    position:absolute;
+    color:#fff;
+    padding:8px;
+    content:attr(data-text);
+    transition:0.5s;
+    padding-top:2em;
+    margin-top:8px;
+    transform:translateY(100%);
+    opacity:0;  /**Ändrar på hur synlig texten ska vara innan man hoverar över**/
+  }
+  
+  .text:hover:after{
+    transform:translateY(0);
+    transition:0.5s 0.1s;
+    opacity:1;  /**Ändrar på hur synlig texten ska vara efter att man har hoverat över rutan**/
+  }
+.text:hover:before{
+    transform:translateY(0);
+    padding:8px;
+    background-color:rgba(0,0,0,0.6);
+    transition:0.5s;
+}
+
