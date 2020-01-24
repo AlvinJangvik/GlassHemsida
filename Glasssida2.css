@@ -4,7 +4,7 @@ body{  /**Ändrar allt inom body**/
 
 p:nth-child(odd){
 background-color:#ffc3ef;
-    border:1px solid grey;
+    border:1px solid grey; /**lägger till en grå border**/
 
 }
 p:nth-child(even){
@@ -12,41 +12,41 @@ background-color:#adffd7;
     border:1px solid grey;
 }
 header h1{
-    text-align:center;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    text-align:center;/**all text inom header och h1 blir centrerad**/
+    grid-column-start: 2;/**kolumnen startar på andra kollumnen**/
+    grid-column-end: 2; /**kolumnen slutar**/
     display:block;
     
 }
 header{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    text-align:center;
+    display:grid;/**skapar en grid för header**/
+    grid-template-columns:1fr 1fr 1fr;/** 1fr är 33% av sidan**/
+    text-align:center;/**centrerar texten**/
 }
 nav{
     grid-column-start: 3;
     grid-column-end: 3;
 }
 a{
-    color:white;
+    color:white;/**texten för alla a taggar byter färg**/
 }
 img{
-    width:140px;
+    width:140px;/**storlek på images**/
 }
 /*Här börjar dropdown*/
 .dropdowntn{
     background-color:black;
     color:white;
-    padding:16px;
+    padding:16px;/**ändrar på storleken av dropdwonen**/
     font-size:16px;
-    border-radius:20px;
+    border-radius:20px;/**rundar av hörnen på dropdown meny**/
 
     
 }
 .dropdown{
     position:relative;
     display:inline-block;
-    margin-left:400px;
+    margin-left:400px;/**flyttar på dropdown meny**/
    
 }
 
@@ -57,7 +57,7 @@ img{
     min-width:60px;
     box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
     padding:12px 16px;
-    z-index:1;
+    z-index:1;/**prioriterar och sätter dropdown meny över bilden**/
     right:0;
     border-radius:16px;
 }
@@ -68,16 +68,16 @@ img{
 /*Här sluta dropdown*/
 .text{
     position:relative;
-    width:33vw;
-    height:33vW;
-    background-size:100%;
-    background-position:center;
-    transition:0.5s;
-    overflow:hidden;
-    background-repeat:no-repeat;
-    display:grid;
-    border-color:black;   
-    text-align:center;
+    width:33vw;/**33% av sidan i bredden som anpassa till sidans storlek**/
+    height:33vW;/**33% av höjden**/
+    background-size:100%;/**storlek på bakgrundsbilden i varje ruta**/
+    background-position:center;/**centrerar bakgrundsbilden i varje ruta**/
+    transition:0.5s; /**hur snabbt bilden ska röra sig inom rutan och hur snabbt med rätt färg den ska komma fram**/
+    overflow:hidden;/**gör så att skuggan på textrutorna inte syns under bilderna**/
+    background-repeat:no-repeat;/**man kan inte se att bilden repeterar sig utan man ser bara 1 exemplar av varje bild**/
+    display:grid;/**skapar en grid för alla rutor**/
+    border-color:black;/**färgen på bordern**/   
+    text-align:center;/**centrerar texten**/
 }
 .wrapper{
     display:grid;
@@ -85,9 +85,9 @@ img{
 }
 
 .text1{
-    background-image:url(https://www.fourjay.org/myphoto/f/112/1127876_strawberry-ice-cream-png.png);
-    background-size: 400px auto;
-    border-radius:50px;
+    background-image:url(https://www.fourjay.org/myphoto/f/112/1127876_strawberry-ice-cream-png.png);/**länk på bild som visas**/
+    background-size: 400px auto;/**storlek på bilden **/
+    border-radius:50px;/**av rundade hörn på bilden**/
 }
 
 .text2
@@ -107,7 +107,7 @@ img{
     background-image:url(https://www.moevenpick-icecream.com/sites/default/files/styles/listing_image/public/products/photos/chocolate-salted-caramel.png?itok=dIkbU69h);
     background-size: 450px auto;
     border-radius:50px;
-    margin-top:-16px;
+    margin-top:-16px;/**höjer upp blden med -16px**/
 }
 .text5
 {
@@ -125,7 +125,7 @@ img{
 }
 
 .text:hover{
-    background-size:115%;
+    background-size:115%;/**storlek på bilden när man hoverar över**/
   }
 .text1:hover{
     background-size:150%;
@@ -144,20 +144,20 @@ img{
   
 .text:before{
     position:absolute;
-    top:0;
+    top:0;/**var och hur stor skuggan ska placera sig på rutan**/
     bottom:0;
     left:0;
     right:0;
-    transform:translateY(90%);
+    transform:translateY(90%);/**hur mycket utav skuggan ska visas innan man hoverar över den på rutan**/
     background-color:rgba(0,0,0,0.3);
     color:#fff;
     padding:0 8px;
-    content:attr(data-title);
-    transition:0.5s 0.1s;
+    content:attr(data-title);/**gör så att texten följer med skuggan som kommer över bilden**/
+    transition:0.5s 0.1s;/**hur snabbt skuggan ska röra sig över bilden**/
     font-weight:bold;
     font-size:1.5em;
     border-radius:55px;
-    margin-right:5px;
+    margin-right:5px;/**flyttar in skuggan lite från högersidan in i rutan med 5 px**/
     margin-left:5px;
     margin-top:5px;
        
@@ -166,9 +166,9 @@ img{
     position:absolute;
     color:#fff;
     padding:8px;
-    content:attr(data-text);
+    content:attr(data-text);/**visar texten efter att du har hoverat**/
     transition:0.5s;
-    padding-top:2em;
+    padding-top:2em;/**vart texten i skuggan ska visa sig**/
     margin-top:8px;
     transform:translateY(100%);
     opacity:0;  /**Ändrar på hur synlig texten ska vara innan man hoverar över**/
