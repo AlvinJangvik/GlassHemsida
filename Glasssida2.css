@@ -33,6 +33,33 @@ a{
 img{
     width:140px;/**storlek på images**/
 }
+/**Kontant css börjar**/
+.logo.k { grid-area: header; }
+.text.k { grid-area: main;
+        font-size: 21px
+        
+       }
+.meny.k { grid-area: menu; }
+.empty {grid-area: empty; }
+.mitten {
+    position:absolute;
+    left:-800%;
+    top:500%;
+    text-align: bold;
+}
+.mitten2{
+    position:absolute;
+    left:-760%;
+    top:550%;
+    text-align: bold;
+}
+.mitten3   {
+    position:absolute;
+    left:-720%;
+    top:600%;
+    text-align: bold;
+}
+/**Kontant css slutar**/
 /*Här börjar dropdown*/
 .dropdowntn{
     background-color:black;
